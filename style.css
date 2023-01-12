@@ -1,0 +1,252 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+
+:root {
+    --background: #000;
+    --text-color: #FFF;
+    --button: #8257E5;
+    --border: #29292E;
+    --border-menu-mobile: #A8A8B3;
+    --text-color-menu-mobile: #E1E1E6;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--background);
+    color: var(--text-color);
+}
+
+.blur-1 {
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: rotate(-180deg);
+    z-index: -1;
+}
+
+.blur-2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: rotate(180deg);
+    z-index: -1;
+}
+
+.blur-mobile {
+    display: none;
+}
+
+#header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#header button {
+    padding: 11px 38px;
+    text-transform: uppercase;
+    color: var(--text-color);
+    font-weight: 700;
+    background: transparent;
+    border: 1px solid var(--button);
+    border-radius: 6px;
+    transition: .5s ease-in-out;
+}
+
+#header button:hover {
+    transform: scale(110%);
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 60px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.menu a:hover {
+    cursor: pointer;
+    transition: .5s;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 36px;
+}
+
+.main span {
+    font-size: 40px;
+}
+
+.main .above {
+    font-weight: 700;
+}
+
+.main .below {
+    text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button), -1px 1px 0 var(--button), 1px 1px 0 var(--button);
+    color: var(--background);
+}
+
+#mobile-logo {
+    display: none;
+}
+
+.description {
+    display: none;
+}
+
+.mobile-button {
+    display: none;
+}
+
+.open,
+.close {
+    display: none;
+}
+
+.hide {
+    display: none;
+}
+
+
+@media only screen and (max-width: 960px) {
+    body {
+        width: 100%;
+        height: 100%;
+    }
+
+    #header {
+        border-bottom: 1px solid var(--border-menu-mobile);
+        padding-bottom: 15px;
+        justify-content: space-between;
+        margin-top: 0;
+        padding: 25px 25px;
+    }
+
+    #header button {
+        display: none;
+    }
+
+    .show {
+        display: block;
+    }
+
+    .hide {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menu.show {
+        position: absolute;
+        top: 85px;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        height: 960px;
+        width: 100%;
+        background: var(--background);
+        transition: .5s;
+    }
+
+    .menu.show .item {
+        padding: 15px;
+        border-bottom: 1px solid var(--border-menu-mobile);
+        transition: .5s;
+    }
+
+    .menu.show .item a {
+        color: var(--border-menu-mobile);
+    }
+
+    .menu.show .item:hover {
+        position: relative;
+        bottom: 1px;
+        border-left: 5px solid var(--button);
+        font-weight: 700;
+    }
+
+    .mobile-button {
+        display: block;
+        margin: 0 auto;
+        padding: 11px 38px;
+        text-transform: uppercase;
+        color: var(--text-color);
+        font-weight: 700;
+        background: transparent;
+        border: 1px solid var(--button);
+        border-radius: 6px;
+        transition: .5s ease-in-out;
+        width: 200px;
+    }
+
+    .mobile-button:hover {
+        transform: scale(110%);
+        cursor: pointer;
+        transition: .5s ease-in-out;
+    }
+
+    .blur-1 {
+        display: none;
+    }
+
+    .blur-2 {
+        display: none;
+    }
+
+    .blur-mobile {
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    #logo {
+        display: none;
+    }
+
+    #mobile-logo {
+        display: block;
+    }
+
+    #main-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 35px;
+    }
+
+    #main-image img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .description {
+        margin: 55px 20px;
+        display: block;
+    }
+
+    .above {
+        margin-top: 100px;
+    }
+}
