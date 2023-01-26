@@ -4,11 +4,12 @@ function toggleMenu() {
   let closeMenu = document.querySelector(".close");
 
   navBar.classList.toggle("show");
+  navBar.classList.toggle("slideInRight")
 
   if (openMenu.classList.contains("hide")) {
     openMenu.classList.remove("hide")
     closeMenu.classList.add("show")
-  } else {
+  } else { 
     closeMenu.classList.remove("show")
     openMenu.classList.add("hide")
   }
