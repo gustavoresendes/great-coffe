@@ -4,7 +4,6 @@ function toggleMenu() {
   let closeMenu = document.querySelector(".close");
 
   navBar.classList.toggle("show");
-  navBar.classList.toggle("slideInRight")
 
   if (openMenu.classList.contains("hide")) {
     openMenu.classList.remove("hide")
