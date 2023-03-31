@@ -119,6 +119,11 @@ body {
     display: none;
 }
 
+.open:hover,
+.close:hover {
+    cursor: pointer;
+}
+
 .hide {
     display: none;
 }
